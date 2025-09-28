@@ -9,4 +9,4 @@ public class TP01 {
         int hasil = (modal - biaya) * hari;
         System.out.println(hasil);
     }
-}
+}  

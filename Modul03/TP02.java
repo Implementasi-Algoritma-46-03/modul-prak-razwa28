@@ -9,4 +9,4 @@ public class TP02 {
         int total = jumlah * harga;
         System.out.println("Hi, " + nama + ". Total belanja adalah " + total + " rupiah");
     }
-}
+} 
