@@ -8,5 +8,6 @@ public class TP01 {
         int hari = sc.nextInt();
         int hasil = (modal - biaya) * hari;
         System.out.println(hasil);
+        sc.close();
     }
 }  

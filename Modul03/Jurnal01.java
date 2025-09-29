@@ -6,5 +6,6 @@ public class Jurnal01 {
         String angka = sc.nextLine();
         System.out.println(angka.charAt(0));
         System.out.println(angka.substring(1));
+        sc.close();
     }
 }

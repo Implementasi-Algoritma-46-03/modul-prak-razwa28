@@ -8,5 +8,6 @@ public class Jurnal02 {
         double c = sc.nextDouble();
         double rata = (a + b + c) / 3;
         System.out.printf("Nilai rata-rata: %.2f", rata);
+        sc.close();
     }
 }
