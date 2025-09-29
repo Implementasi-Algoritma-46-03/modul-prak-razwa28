@@ -1,8 +1,8 @@
 ## Identitas
 
-Nama  : Muhammad Razwa Rizky Syakir
+Nama : Muhammad Razwa Rizky Syakir
 
-NIM   : 607062500010
+NIM  : 607062500010
 
 ## Instruksi
 
