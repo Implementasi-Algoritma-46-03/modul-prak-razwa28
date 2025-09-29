@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Jurnal03a {
+public class Jurnal03 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         double a = sc.nextDouble();
