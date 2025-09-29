@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TP02 {
+public class TP02b {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String nama = sc.next();
