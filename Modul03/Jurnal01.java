@@ -5,7 +5,6 @@ public class Jurnal01 {
         Scanner sc = new Scanner(System.in);
         String angka = sc.nextLine();
 
-        // ambil 1 atau 2 digit pertama
         String depan = angka.substring(0, angka.length() - 3);
         String belakang = angka.substring(angka.length() - 3);
 
