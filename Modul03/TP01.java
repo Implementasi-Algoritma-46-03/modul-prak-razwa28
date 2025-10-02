@@ -7,7 +7,7 @@ public class TP01 {
         int biaya = sc.nextInt();
         int hari = sc.nextInt();
 
-        int hasil =  (biaya*hari) + hari;
+        int hasil =  (biaya * hari) + modal;
         System.out.println(hasil);
     }
 }
