@@ -3,12 +3,11 @@ import java.util.Scanner;
 public class Jurnal01 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String angka = sc.nextLine();
+        int angka = sc.nextInt();
 
-        String depan = angka.substring(0, angka.length() - 3);
-        String belakang = angka.substring(angka.length() - 3);
-
-        System.out.println(depan);
-        System.out.println(belakang);
+        int total = angka / 1000;
+        int sisa = angka %1000 ;
+        System.out.println( total);
+        System.out.println( sisa);
     } 
 }
