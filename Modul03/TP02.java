@@ -6,8 +6,8 @@ public class TP02 {
         String nama = sc.next();
         int jumlah = sc.nextInt();
         int harga = sc.nextInt();
+
         int total = jumlah * harga;
         System.out.println("Hi, " + nama + ". Total belanja adalah " + total + " rupiah");
-        sc.close();
     }
-} 
+}

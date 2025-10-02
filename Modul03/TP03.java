@@ -3,10 +3,13 @@ import java.util.Scanner;
 public class TP03 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        System.out.println(a / b);
-        System.out.println(a % b);
-        sc.close();
+        int n = sc.nextInt();
+        int t = sc.nextInt();
+
+        int perOrang = n / (t + 1); 
+        int sisa = n % (t + 1);
+
+        System.out.println(perOrang);
+        System.out.println(sisa);
     }
-} 
+}

@@ -6,8 +6,8 @@ public class TP01 {
         int modal = sc.nextInt();
         int biaya = sc.nextInt();
         int hari = sc.nextInt();
-        int hasil = (modal - biaya) * hari;
+
+        int hasil = (modal / biaya) * hari;
         System.out.println(hasil);
-        sc.close();
     }
-}  
+}
