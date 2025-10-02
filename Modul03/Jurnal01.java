@@ -10,5 +10,5 @@ public class Jurnal01 {
 
         System.out.println(depan);
         System.out.println(belakang);
-    }
+    } 
 }

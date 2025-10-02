@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class Jurnal02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double n1 = sc.nextDouble();
-        double n2 = sc.nextDouble();
-        double n3 = sc.nextDouble();
+        double nilai1 = sc.nextDouble();
+        double nilai2 = sc.nextDouble();
+        double nilai3 = sc.nextDouble();
 
-        double rata = (n1 + n2 + n3) / 3.0;
-        System.out.printf("Nilai rata-rata: %.2f%n", rata);
+        double rata = (nilai1 + nilai2 + nilai3) / 3.0;
+        System.out.printf("Nilai rata-rata: %.2f", rata);
     }
-}
+} 

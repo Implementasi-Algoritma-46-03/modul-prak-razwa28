@@ -7,10 +7,10 @@ public class Jurnal03 {
         double n2 = sc.nextDouble();
         double n3 = sc.nextDouble();
 
-        double rata = (n1 * 0.3) + (n2 * 0.3) + (n3 * 0.4);
-        boolean lulus = rata >= 50;
+        double rata = (n1 * 0.25) + (n2 * 0.35) + (n3 * 0.40);
+        boolean lulus = rata >= 75;
 
         System.out.printf("%.2f%n", rata);
         System.out.println("Lulus MK: " + lulus);
-    }
+    } 
 }
