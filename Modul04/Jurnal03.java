@@ -3,15 +3,14 @@ import java.util.Scanner;
 public class Jurnal03 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int idar = input.nextInt();
         int dira = input.nextInt();
         int radi = input.nextInt();
+        int idar = input.nextInt();
 
-        // Nilai + nama dalam array
-        int[] nilai = {idar, dira, radi};
-        String[] nama = {"Idar", "Dira", "Radi"};
+        int[] nilai = {dira, radi, idar};
+        String[] nama = {"Dira", "Radi", "Idar"};
 
-        // Bubble sort berdasarkan nilai (menaik)
+        // Urutkan dari nilai terkecil ke terbesar (bubble sort)
         for (int i = 0; i < nilai.length - 1; i++) {
             for (int j = 0; j < nilai.length - 1 - i; j++) {
                 if (nilai[j] > nilai[j + 1]) {
