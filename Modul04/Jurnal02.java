@@ -23,6 +23,6 @@ public class Jurnal02 {
             System.out.println("Penghasilan bersih = Rp. " + (int)(penghasilan * 1000000 - pajak));
         }
 
-        input.close();
+        input.close(); 
     }
 }
