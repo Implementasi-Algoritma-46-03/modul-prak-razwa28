@@ -1,32 +1,35 @@
 import java.util.Scanner;
 
 public class TP03 {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String nama = input.nextLine(); // baca nama bangun datar
-        nama = nama.trim(); // hilangkan spasi tambahan
 
-        double luas = 0, keliling = 0;
+    public static void main(final String[] args) {
+        // Kerjakan soalnya di sini
+        // Input
+        Scanner s = new Scanner(System.in);
+        String bentuk = s.nextLine();
+        double b        = 0.0; 
+        double a        = 0.0; 
+        double luas     = 0.0;
+        double keliling = 0.0;
 
-        switch (nama.toLowerCase()) {
-            case "persegi": {
-                double sisi = input.nextDouble();
-                luas = sisi * sisi;
-                keliling = 4 * sisi;
+        // Proses
+        switch (bentuk) {
+            case "Persegi":
+                a = s.nextDouble();
+                luas = a * a;
+                keliling = 4 * a;
                 break;
-            }
 
-            case "persegi panjang": {
-                double panjang = input.nextDouble();
-                double lebar = input.nextDouble();
-                luas = panjang * lebar;
-                keliling = 2 * (panjang + lebar);
+            case "Persegi Panjang":
+                a = s.nextDouble();
+                b = s.nextDouble();
+                luas = a * b;
+                keliling = 2 * (a + b);
                 break;
-            }
 
-            case "segitiga":
-                double a = input.nextDouble();
-                double b = input.nextDouble(); 
+            case "Segitiga":
+                a = s.nextDouble();
+                b = s.nextDouble(); 
                 luas = (a * b) / 2;
                 double t = (a * a + b * b);
                 double x = 0.0;
@@ -40,23 +43,16 @@ public class TP03 {
                 keliling = a + b + miring;
                 break;
 
-
-            case "lingkaran": {
-                double diameter = input.nextDouble();
-                double jari = diameter / 2;
-                double pi = 3.14;
-                luas = pi * jari * jari;
-                keliling = pi * diameter;
+            case "Lingkaran":
+                a = s.nextDouble();
+                double r = a / 2.0;
+                luas = 3.14 * r * r;
+                keliling = 2 * 3.14 * r;
                 break;
-            }
-
-            default:
-                System.out.println("Bangun datar tidak dikenal.");
-                return;
         }
 
-        // Cetak hasil: luas dan keliling (maksimal 2 angka di belakang koma)
-        if (nama.equals("Lingkaran")) {
+        // Output
+        if (bentuk.equals("Lingkaran")) {
             System.out.printf("%.2f %.2f%n", luas, keliling);
         } else {
             System.out.printf("%d %d%n", (int)luas, (int)keliling);
