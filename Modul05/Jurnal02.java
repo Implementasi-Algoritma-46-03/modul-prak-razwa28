@@ -4,7 +4,8 @@ public class Jurnal02 {
     public static void main(final String[] args) {
         Scanner input = new Scanner(System.in);
 
-        String hari = input.nextLine();
+        // Gunakan next() agar tidak terseret spasi
+        String hari = input.next();
         int bilanganBulat = input.nextInt();
 
         int HariSekarang = 0;
@@ -18,7 +19,6 @@ public class Jurnal02 {
             case "Minggu": HariSekarang = 7; break;
         }
 
-        // Hitung hari baru dengan pembungkus (modulo)
         int HariSetelah = (HariSekarang + bilanganBulat) % 7;
         if (HariSetelah == 0) HariSetelah = 7;
 
