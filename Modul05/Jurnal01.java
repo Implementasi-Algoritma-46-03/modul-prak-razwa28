@@ -1,13 +1,16 @@
-import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class Jurnal01 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-
+        // Ganti sesuai test case
         String namaMakanan = "Nasi Goreng";
         int jumlah = 3;
         int harga = 15000;
 
-        System.out.println(namaMakanan + " " + jumlah + " buah, total harga Rp. " + (jumlah * harga));
+        int total = jumlah * harga;
+        DecimalFormat df = new DecimalFormat("#,###");
+        String totalFormat = df.format(total).replace(",", ".");
+
+        System.out.println(namaMakanan + " " + jumlah + " buah, total harga Rp. " + totalFormat);
     }
 }
