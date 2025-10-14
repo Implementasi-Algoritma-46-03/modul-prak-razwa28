@@ -17,6 +17,11 @@ public class Jurnal03 {
             default: System.out.println("Operator tidak dikenal"); return;
         }
 
-        System.out.println(hasil);
+        // Format agar sesuai (7 angka desimal)
+        if (op.equals("/")) {
+            System.out.printf("%.7f%n", hasil);
+        } else {
+            System.out.println(hasil);
+        }
     }
 }
