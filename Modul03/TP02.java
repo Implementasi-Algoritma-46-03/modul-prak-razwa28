@@ -1,19 +1,25 @@
 import java.util.Scanner;
-
 public class TP02 {
 
     public static void main(String[] args) {
-        Scanner tugas2 = new Scanner(System.in);
-         // Kerjakan soalnya di sini
+        Scanner input = new Scanner(System.in);
+        String namaPembeli = input.next();
+        int jumlahBarang = input.nextInt();
+        int hargaPerBarang = input.nextInt();
+        int totalBelanja = jumlahBarang * hargaPerBarang;
+        System.out.println("Hi, " + namaPembeli + ". Total belanja adalah " + totalBelanja + " rupiah.");
+        input.close();
+    }
+        Scanner input = new Scanner(System.in);
 
-        String nama = tugas2.next();
-        int jumlah = tugas2.nextInt();
-        int harga = tugas2.nextInt();
+        // Hitung total harga belanja
+        totalBelanja = jumlahBarang * hargaPerBarang;
 
-        int total = harga * jumlah;
+        // Cetak output sesuai format: "Hi [nama], total belanja adalah [total] rupiah."
+        // Menggunakan System.out.println untuk mencetak keseluruhan string
+        System.out.println("Hi " + nama + ", total belanja adalah " + totalBelanja + " rupiah.");
 
-        System.out.println("Hi, " + nama + ". Total belanja adalah " + total + " rupiah.");
-
-        tugas2.close();
+        // Menutup objek Scanner
+        scanner.close();
     }
 }

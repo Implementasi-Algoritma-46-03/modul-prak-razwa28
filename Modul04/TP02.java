@@ -3,25 +3,36 @@ import java.util.Scanner;
 public class TP02 {
 
     public static void main(final String[] args) {
-        Scanner n = new Scanner(System.in);
-        int harga = n.nextInt();
-        double diskon = 0;
+        Scanner input = new Scanner(System.in);
+        int jumlahBelanja = input.nextInt();
+        
+        int diskonBelanja = 5; // diskon = 5%
+        int pajak = 11; // pajak = 11%
+        
 
-        if (harga >= 200000) {
-            diskon = harga * 0.05;
-        }
+        if (jumlahBelanja > 200_000) {
+            double totalPotongan = jumlahBelanja * (diskonBelanja / 100.0);
+            double hasilPotongan = jumlahBelanja - totalPotongan;
 
-        double total = harga - diskon;
-        double pajak = total * 0.11;
-        double totalBayar = total + pajak;
+            double hasilPajak = hasilPotongan * (pajak / 100.0);
+            // hasilPemotonganPajak = totalPotongan - hasilPajak;
+            double totalBelanja = hasilPotongan + hasilPajak;
 
-        System.out.println("Transaksi = " + harga);
-        if (diskon > 0) {
-            System.out.printf("Total = %.0f%s%.0f%n", (double) harga, " - ", diskon);
+            System.out.println("Transaksi = " + jumlahBelanja);
+            System.out.println("Total = " + jumlahBelanja + " - " + (int)totalPotongan);
+            System.out.println("Ppn 11% = " + (hasilPajak));
+            System.out.println("Total dibayar = " + totalBelanja);
+
         } else {
-            System.out.printf("Total = %.0f%n", (double) harga);
+            double hasilPajak = jumlahBelanja * (pajak / 100.0);
+            // hasilPemotonganPajak = totalPotongan - hasilPajak;
+            double totalBelanja = jumlahBelanja + hasilPajak;
+
+            System.out.println("Transaksi = " + jumlahBelanja);
+            System.out.println("Total = " + jumlahBelanja);
+            System.out.println("Ppn 11% = " + (hasilPajak));
+            System.out.println("Total dibayar = " + totalBelanja);
         }
-        System.out.printf("Ppn 11%% = %.1f%n", pajak);
-        System.out.printf("Total dibayar = %.1f%n", totalBayar);
+        input.close();
     }
 }

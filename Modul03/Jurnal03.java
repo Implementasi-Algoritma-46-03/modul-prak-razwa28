@@ -1,20 +1,15 @@
 import java.util.Scanner;
-
 public class Jurnal03 {
 
     public static void main(final String[] args) {
-        // Kerjakan soalnya di sini
-        Scanner tugas3 = new Scanner(System.in);
-
-        int niprak = tugas3.nextInt();
-        int niases = tugas3.nextInt();
-        int niakhir = tugas3.nextInt();
-
-        double jumlah = niprak * 0.25 + niases * 0.35 + niakhir * 0.40;
-        System.out.printf("%.2f\n", jumlah);
-        boolean nilaiakhir = jumlah > 75;
-        System.out.println("Lulus MK: " + nilaiakhir);
-
-        tugas3.close();
+        Scanner input = new Scanner(System.in);
+        double nilaiPraktikum = input.nextDouble();
+        double nilaiAsesmen1 = input.nextDouble();
+        double nilaiAsesmen2 = input.nextDouble();
+        double nilaiAkhir = (0.25 * nilaiPraktikum) + (0.35 * nilaiAsesmen1) + (0.40 * nilaiAsesmen2);
+        boolean lulusMK = nilaiAkhir >= 75;
+        System.out.printf("%.2f%n", nilaiAkhir);
+        System.out.println("Lulus MK: " + lulusMK);
+        input.close();
     }
 }

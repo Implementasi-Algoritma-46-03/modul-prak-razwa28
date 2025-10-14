@@ -1,28 +1,37 @@
 import java.util.Scanner;
 
 public class Jurnal02 {
-    public static void main(String[] args) {
+
+    public static void main(final String[] args) {
         Scanner input = new Scanner(System.in);
-        int penghasilan = input.nextInt();
-
-        double pajak = 0;
-        if (penghasilan <= 50) {
-            pajak = penghasilan * 1000000 * 0.05;
-            System.out.println("Penghasilan kotor = " + penghasilan + " juta Rupiah");
-            System.out.println("Pajak 5% = Rp. " + (int)pajak);
-            System.out.println("Penghasilan bersih = Rp. " + (int)(penghasilan * 1000000 - pajak));
-        } else if (penghasilan <= 500) {
-            pajak = penghasilan * 1000000 * 0.15;
-            System.out.println("Penghasilan kotor = " + penghasilan + " juta Rupiah");
-            System.out.println("Pajak 15% = Rp. " + (int)pajak);
-            System.out.println("Penghasilan bersih = Rp. " + (int)(penghasilan * 1000000 - pajak));
+        
+        int penghasilanJuta = input.nextInt();
+        
+        double persentasePajak;
+        double besarPajak;
+        
+        // Menentukan persentase pajak berdasarkan penghasilan
+        if (penghasilanJuta <= 50) {
+            persentasePajak = 5.0;
+        } else if (penghasilanJuta <= 250) {
+            persentasePajak = 15.0;
+        } else if (penghasilanJuta <= 500) {
+            persentasePajak = 25.0;
         } else {
-            pajak = penghasilan * 1000000 * 0.30;
-            System.out.println("Penghasilan kotor = " + penghasilan + " juta Rupiah");
-            System.out.println("Pajak 30% = Rp. " + (int)pajak);
-            System.out.println("Penghasilan bersih = Rp. " + (int)(penghasilan * 1000000 - pajak));
+            persentasePajak = 30.0;
         }
-
-        input.close(); 
-    }
+        
+        // Menghitung besar pajak dalam rupiah
+        besarPajak = (persentasePajak / 100.0) * penghasilanJuta * 1000000;
+        
+        // Menghitung penghasilan bersih
+        double penghasilanBersih = (penghasilanJuta * 1000000) - besarPajak;
+        
+        // Output sesuai format
+        System.out.println("Penghasilan kotor = " + penghasilanJuta + " juta Rupiah");
+        System.out.printf("Pajak %.0f%% = Rp. %.0f%n", persentasePajak, besarPajak);
+        System.out.printf("Penghasilan bersih = Rp. %.0f%n", penghasilanBersih);
+        
+        input.close();
+}
 }
