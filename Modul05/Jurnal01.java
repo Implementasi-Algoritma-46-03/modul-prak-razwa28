@@ -3,12 +3,19 @@ import java.util.Scanner;
 public class Jurnal01 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int a = in.nextInt();
-        int b = in.nextInt();
+        String menu = in.nextLine();
+        int jumlah = in.nextInt();
 
-        int jumlah = a + b;
-        int selisih = Math.abs(a - b); // pastikan hasil positif
+        int harga = 0;
 
-        System.out.println(jumlah + " " + selisih);
+        if (menu.equalsIgnoreCase("Nasi Goreng")) {
+            harga = 15000;
+        } else if (menu.equalsIgnoreCase("Kwetiau Goreng") || menu.equalsIgnoreCase("Kwetiau Nyemek")) {
+            harga = 20000;
+        }
+
+        int total = harga * jumlah;
+
+        System.out.println(menu + " " + jumlah + " buah, total harga Rp. " + String.format("%,d", total).replace(',', '.'));
     }
 }
