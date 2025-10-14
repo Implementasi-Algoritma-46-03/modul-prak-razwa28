@@ -1,8 +1,14 @@
 ## Identitas
 
+<<<<<<< HEAD
 Nama  : Muhammad Razwa Rizky Syakir
 
 NIM   : 607062500010
+=======
+Nama: Pasya Muhammad Rizky
+
+NIM : 607062500047
+>>>>>>> d1830aa6b90ff37261a032044a713f16c7a406ec
 
 ## Instruksi
 
