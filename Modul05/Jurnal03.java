@@ -2,10 +2,21 @@ import java.util.Scanner;
 
 public class Jurnal03 {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String input = in.nextLine();
+        Scanner input = new Scanner(System.in);
+        double a = input.nextDouble();
+        String op = input.next();
+        double b = input.nextDouble();
 
-        // minimal tampilkan input agar tidak error
-        System.out.println(input);
+        double hasil = 0;
+
+        switch (op) {
+            case "+": hasil = a + b; break;
+            case "-": hasil = a - b; break;
+            case "*": hasil = a * b; break;
+            case "/": hasil = a / b; break;
+            default: System.out.println("Operator tidak dikenal"); return;
+        }
+
+        System.out.println(hasil);
     }
 }
