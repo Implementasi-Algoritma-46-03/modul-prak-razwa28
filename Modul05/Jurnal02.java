@@ -4,7 +4,6 @@ public class Jurnal02 {
     public static void main(final String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // Gunakan next() agar tidak terseret spasi
         String hari = input.next();
         int bilanganBulat = input.nextInt();
 
@@ -14,7 +13,8 @@ public class Jurnal02 {
             case "Selasa": HariSekarang = 2; break;
             case "Rabu": HariSekarang = 3; break;
             case "Kamis": HariSekarang = 4; break;
-            case "Jum'at": HariSekarang = 5; break;
+            case "Jum'at":
+            case "Jumat": HariSekarang = 5; break;
             case "Sabtu": HariSekarang = 6; break;
             case "Minggu": HariSekarang = 7; break;
         }

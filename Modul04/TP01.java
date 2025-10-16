@@ -13,6 +13,4 @@ public class TP01 {
             System.out.println("Bukan kelipatan enam");
         }
 
-        // Menutup objek Scanner
-        scanner.close();
     }
