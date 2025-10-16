@@ -3,26 +3,34 @@ import java.util.Scanner;
 public class TP02 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Masukkan jumlah hari (N): ");
         int N = input.nextInt();
+        int b =  N % 7;
 
-        String[] hari = {
-            "vendredi",  // Jumat
-            "samedi",    // Sabtu
-            "dimanche",  // Minggu
-            "lundi",     // Senin
-            "mardi",     // Selasa
-            "mercredi",  // Rabu
-            "jeudi"      // Kamis
-        };
-
-        // indeks hari saat ini = 0 (karena hari ini vendredi)
-        int indeksSekarang = 0;
-
-        // hitung indeks hari setelah N hari
-        int indeksHasil = (indeksSekarang + N) % 7;
-
-        // tampilkan nama hari dalam bahasa Prancis
-        System.out.println(hari[indeksHasil]);
+        switch (b) {
+            case 0: 
+            System.out.println("vendredi"); // jum'at
+            break;
+            case 1:
+            System.out.println("samedi"); //sabtu
+            break;
+            case 2:
+            System.out.println("dimanche"); //minggu
+            break;
+            case 3:
+            System.out.println("lundi"); //senin
+            break;
+            case 4:
+            System.out.println("mardi"); //selasa
+            break;
+            case 5:
+            System.out.println("mercredi"); //rabu
+            break;
+            case 6:
+            System.out.println("jeudi"); //kamis
+            break;
+        
+            default:
+                break;
+        }
     }
 }
