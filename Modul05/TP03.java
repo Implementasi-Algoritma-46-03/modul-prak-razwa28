@@ -11,7 +11,6 @@ public class TP03 {
         double alas = 0.0;
         double luas = 0.0;
         double keliling = 0.0;
-        int miring = (int) Math.sqrt(alas * alas + tinggi * tinggi);
 
 
         // Proses
@@ -30,7 +29,19 @@ public class TP03 {
                 break;
 
             case "Segitiga":
-                System.out.println(((alas * tinggi) / 2) + " " + (alas + tinggi + miring));
+                alas = s.nextDouble();
+                tinggi = s.nextDouble(); 
+                luas = (alas * tinggi) / 2;
+                double t = (alas * alas + tinggi * tinggi);
+                double x = 0.0;
+                    if (alas > tinggi) {
+                        x = alas;
+                    } else {
+                        x = tinggi;
+                    }
+
+                double miring = (x + (t / x)) / 2; 
+                keliling = alas + tinggi + miring;
                 break;
 
             case "Lingkaran":
