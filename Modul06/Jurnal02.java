@@ -1,36 +1,66 @@
 import java.util.Scanner;
-
 public class Jurnal02 {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        String lirik = in.nextLine();
+
+    public static void main(final String[] args) {
+        // Kerjakan soalnya di sini
+        Scanner input = new Scanner(System.in);
+        String lagu = input.nextLine();
+        String hasilkw = hapus(lagu);
+        String hasilSemua = hapusA(hasilkw);
         
-        // Hilangkan spasi agar sesuai contoh soal
-        String tanpaSpasi = lirik.replace(" ", "");
-        int panjang = tanpaSpasi.length();
-        int sisa = panjang % 5;
-        
-        String vokal = "";
-        if (sisa == 0) {
-            vokal = "a";
-        } else if (sisa == 1) {
-            vokal = "e";
-        } else if (sisa == 2) {
-            vokal = "i";
-        } else if (sisa == 3) {
-            vokal = "o";
-        } else if (sisa == 4) {
-            vokal = "u";
+
+        System.out.println(hasilSemua);
+    }
+
+    private static String hapus(String pengganti) {
+        int a = pengganti.length();
+        int b = a % 5;
+
+        String hasil = null;
+        switch (b) {
+        case 0:
+            hasil = pengganti.replaceAll("[iueo]", "a");
+            break;
+        case 1:
+            hasil = pengganti.replaceAll("[aiuo]", "e");
+            break;
+        case 2:
+            hasil = pengganti.replaceAll("[aueo]", "i");
+            break;
+        case 3:
+            hasil = pengganti.replaceAll("[aiue]", "o");
+            break;
+        case 4:
+            hasil = pengganti.replaceAll("[aieo]", "u");
+            break;
+        default:
         }
+         return hasil;
+    }
 
-        // Ganti semua huruf vokal (baik kecil maupun besar)
-        String hasil = lirik
-            .replaceAll("[aA]", vokal)
-            .replaceAll("[iI]", vokal)
-            .replaceAll("[uU]", vokal)
-            .replaceAll("[eE]", vokal)
-            .replaceAll("[oO]", vokal);
-
-        System.out.println(hasil);
+        private static String hapusA(String pengganti) {
+        int a = pengganti.length();
+        int b = a % 5;
+        
+        String hasil = null;
+        switch (b) {
+        case 0:
+            hasil = pengganti.replaceAll("[IUEO]", "A");
+            break;
+        case 1:
+            hasil = pengganti.replaceAll("[AIUO]", "E");
+            break;
+        case 2:
+            hasil = pengganti.replaceAll("[AUEO]", "I");
+            break;
+        case 3:
+            hasil = pengganti.replaceAll("[AIUE]", "O");
+            break;
+        case 4:
+            hasil = pengganti.replaceAll("[AIEO]", "U");
+            break;
+        default:
+        }
+        return hasil;
     }
 }
