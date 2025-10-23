@@ -9,7 +9,7 @@ public class TP01 {
         double R3 = in.nextDouble();
 
         System.out.print("Celcius: ");
-        System.out.printf("%.2f %.2f %.2f%n", 
+        System.out.printf("%.1f %.1f %.1f%n", 
             toCelcius(R1), toCelcius(R2), toCelcius(R3));
         System.out.print("\nReamur: ");    
         System.out.printf("%.2f %.2f %.2f%n", 
