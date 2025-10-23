@@ -14,6 +14,7 @@ public class TP01 {
         System.out.print("\nReamur: ");    
         System.out.printf("%.2f %.2f %.2f%n", 
             toReamur(R1), toReamur(R2), toReamur(R3));
+            
     }
 
     private static double toCelcius(double f) {
