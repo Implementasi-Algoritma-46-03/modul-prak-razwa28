@@ -11,7 +11,7 @@ public class TP01 {
         System.out.print("Celcius: ");
         System.out.printf("%.1f %.1f %.1f%n", 
             toCelcius(R1), toCelcius(R2), toCelcius(R3));
-        System.out.print("\nReamur: ");    
+        System.out.print("Reamur: ");    
         System.out.printf("%.2f %.2f %.2f", 
             toReamur(R1), toReamur(R2), toReamur(R3));
 
