@@ -8,8 +8,10 @@ public class TP01 {
         double R2 = in.nextDouble();
         double R3 = in.nextDouble();
 
+        System.out.print("Celcius: ");
         System.out.printf("%.2f %.2f %.2f%n", 
             toCelcius(R1), toCelcius(R2), toCelcius(R3));
+        System.out.print("\nReamur: ");    
         System.out.printf("%.2f %.2f %.2f%n", 
             toReamur(R1), toReamur(R2), toReamur(R3));
     }
