@@ -1,17 +1,20 @@
 import java.util.*;
 
 public class TP03 {
+    // Fungsi rekursif untuk menghitung faktorial
+    static long faktorial(int n) {
+        if (n == 1) {
+            return 1; // base case
+        } else {
+            return n * faktorial(n - 1); // pemanggilan diri sendiri
+        }
+    }
 
-    public static void main(final String[] args) {
+    public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        int n = in.nextInt();
+        int N = in.nextInt();
         in.close();
 
-        long hasil = 1;
-
-        for(int i = 1; i <= n; i++){
-            hasil = hasil * i;
-        }
-        System.out.println(hasil);
+        System.out.println(faktorial(N));
     }
 }
