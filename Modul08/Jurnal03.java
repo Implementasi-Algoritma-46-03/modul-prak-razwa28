@@ -1,8 +1,5 @@
 import java.util.Scanner;
 
-/**
- * Program mengecek apakah bilangan adalah bilangan Strong.
- */
 public class Jurnal03 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -13,10 +10,13 @@ public class Jurnal03 {
         // memproses tiap digit
         while (temp > 0) {
             int digit = temp % 10;
-            int faktorial = 1;
 
-            for (int i = 1; i <= digit; i++) {
+            // hitung faktorial pakai while
+            int faktorial = 1;
+            int i = 1;
+            while (i <= digit) {
                 faktorial *= i;
+                i++;
             }
 
             jumlah += faktorial;
