@@ -8,7 +8,12 @@ public class Jurnal02 {
 
         for (int i = 1; i <= n; i++) {
             for (int j = 1; j <= n; j++) {
-                System.out.print((i * j) + "\t");
+                System.out.print(i * j);
+
+                // beri spasi hanya jika bukan angka terakhir
+                if (j < n) {
+                    System.out.print(" ");
+                }
             }
             System.out.println();
         }
