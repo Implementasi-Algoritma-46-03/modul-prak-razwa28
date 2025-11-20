@@ -8,7 +8,7 @@ public class Jurnal01 {
             }
 
             for (int kolom = 1; kolom <= 5; kolom++) {
-                System.out.print(i + " ");
+                System.out.print(i);
             }
             System.out.println();
         }
