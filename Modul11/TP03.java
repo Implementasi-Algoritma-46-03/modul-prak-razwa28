@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 public class TP03 {
 
@@ -23,5 +23,5 @@ public class TP03 {
 
         //Output
         System.out.println(jumlah);
-    }
+ }
 }
