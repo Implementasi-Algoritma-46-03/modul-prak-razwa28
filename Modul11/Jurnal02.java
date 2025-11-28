@@ -1,24 +1,15 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-
+import java.util.*;
 public class Jurnal02 {
-    public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
 
-        String kalimat = in.nextLine().trim();
+    public static void main(final String[] args) { 
+        // Kerjakan soalnya di sini
+        Scanner input = new Scanner (System.in);
+        String kata = input.nextLine();
 
-        // Pisahkan kata berdasarkan spasi ganda (hasilnya array)
-        String[] kataArray = kalimat.split("\\s+");
-
-        // Masukkan ke ArrayList
-        ArrayList<String> kataList = new ArrayList<>();
-        for (String k : kataArray) {
-            kataList.add(k);
-        }
-
-        // Gabungkan kembali jadi kalimat berspasi tunggal
-        String hasil = String.join(" ", kataList);
+        String[] hapus = kata.split("\\s+");
+        String hasil = String.join(" ", hapus);
 
         System.out.println(hasil);
+
     }
 }
